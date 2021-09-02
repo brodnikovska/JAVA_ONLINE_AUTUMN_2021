@@ -1,3 +1,6 @@
 [submodule "HelloWorld"]
 	path = HelloWorld
 	url = https://github.com/brodnikovska/HelloWorld
+[submodule "GuessGame"]
+	path = GuessGame
+	url = https://github.com/brodnikovska/GuessGame
