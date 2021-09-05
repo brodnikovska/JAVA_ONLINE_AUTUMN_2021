@@ -15,7 +15,18 @@ public class InputNoteNoteBook {
 
     private String lastName;
     private String firstName;
+    private String fathersName;
     private String login;
+    private String usersName;
+
+    public String getUsersName() {
+        return usersName;
+    }
+
+    public void setUsersName() {
+        StringBuilder concatString = new StringBuilder();
+        this.usersName = concatString.append(lastName).append(" ").append(firstName.charAt(0)).append(".").toString();
+    }
 
     public InputNoteNoteBook(View view, Scanner sc) {
         this.view = view;
@@ -31,10 +42,14 @@ public class InputNoteNoteBook {
         this.lastName =
                 utilityController.inputStringValueWithScanner
                         (LAST_NAME, str);
-
         this.firstName =
                 utilityController.inputStringValueWithScanner
                         (FIRST_NAME, str);
+        this.fathersName =
+                utilityController.inputStringValueWithScanner
+                        (FATHERS_NAME, str);
+        setUsersName();
+        System.out.println(usersName);
         this.login =
                 utilityController.inputStringValueWithScanner
                         (LOGIN_DATA, REGEX_LOGIN);
