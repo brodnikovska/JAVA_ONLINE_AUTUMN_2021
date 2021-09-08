@@ -4,6 +4,7 @@ import view.View;
 
 import java.util.Scanner;
 
+import static controller.RegexContainer.*;
 import static controller.RegexContainer.REGEX_LOGIN;
 import static controller.RegexContainer.REGEX_NAME_LAT;
 import static controller.RegexContainer.REGEX_NAME_UKR;
@@ -18,6 +19,8 @@ public class InputNoteNoteBook {
     private String fathersName;
     private String login;
     private String usersName;
+    private String email;
+    private String mobilePhone;
 
     public String getUsersName() {
         return usersName;
@@ -53,5 +56,11 @@ public class InputNoteNoteBook {
         this.login =
                 utilityController.inputStringValueWithScanner
                         (LOGIN_DATA, REGEX_LOGIN);
+        this.email =
+                utilityController.inputStringValueWithScanner
+                        (EMAIL_DATA, REGEX_EMAIL);
+        this.mobilePhone =
+                utilityController.inputStringValueWithScanner
+                        (MOBILE_PHONE_DATA, REGEX_PHONE);
     }
 }
