@@ -50,6 +50,8 @@ public class InputNoteNoteBook {
                 ? REGEX_STREET_UKR : REGEX_STREET_LAT;
         String city = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_CITY_UKR : REGEX_CITY_LAT;
+        String house = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
+                ? REGEX_HOUSE_UKR : REGEX_HOUSE_LAT;
 
         this.lastName =
                 utilityController.inputStringValueWithScanner
@@ -80,5 +82,11 @@ public class InputNoteNoteBook {
         this.street =
                 utilityController.inputStringValueWithScanner
                         (STREET, street);
+        this.houseNumber =
+                utilityController.inputStringValueWithScanner
+                        (HOUSE, house);
+        this.apartmentNumber =
+                utilityController.inputStringValueWithScanner
+                        (APARTMENT, REGEX_APARTMENT);
     }
 }

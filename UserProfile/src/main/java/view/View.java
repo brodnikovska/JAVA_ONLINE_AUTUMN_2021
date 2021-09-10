@@ -10,7 +10,7 @@ public class View {
     private static final String MESSAGES_BUNDLE_NAME = "messages";
     private static final String REGEX_BUNDLE_NAME = "regex-container";
     public static final ResourceBundle messageBundle =
-            ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("ua", "UA"));
+            ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en", "EN"));
     public static final ResourceBundle regexBundle =
             ResourceBundle.getBundle(REGEX_BUNDLE_NAME);
 
