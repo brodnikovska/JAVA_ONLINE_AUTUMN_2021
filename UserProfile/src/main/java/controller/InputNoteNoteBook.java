@@ -21,6 +21,11 @@ public class InputNoteNoteBook {
     private String usersName;
     private String email;
     private String mobilePhone;
+    private String zipCode;
+    private String city;
+    private String houseNumber;
+    private String apartmentNumber;
+    private String street;
 
     public String getUsersName() {
         return usersName;
@@ -41,6 +46,10 @@ public class InputNoteNoteBook {
                 new UtilityController(sc, view);
         String str = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_NAME_UKR : REGEX_NAME_LAT;
+        String street = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
+                ? REGEX_STREET_UKR : REGEX_STREET_LAT;
+        String city = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
+                ? REGEX_CITY_UKR : REGEX_CITY_LAT;
 
         this.lastName =
                 utilityController.inputStringValueWithScanner
@@ -62,5 +71,14 @@ public class InputNoteNoteBook {
         this.mobilePhone =
                 utilityController.inputStringValueWithScanner
                         (MOBILE_PHONE_DATA, REGEX_PHONE);
+        this.zipCode =
+                utilityController.inputStringValueWithScanner
+                        (ZIP_CODE_DATA, REGEX_ZIP);
+        this.city =
+                utilityController.inputStringValueWithScanner
+                        (CITY_DATA, city);
+        this.street =
+                utilityController.inputStringValueWithScanner
+                        (STREET, street);
     }
 }

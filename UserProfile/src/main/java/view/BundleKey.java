@@ -9,6 +9,11 @@ public interface BundleKey {
     String LOGIN_DATA = "input.nickname.data";
     String EMAIL_DATA = "input.email.data";
     String MOBILE_PHONE_DATA = "input.mobile.phone.data";
+    String ZIP_CODE_DATA = "input.zip.code.data";
+    String CITY_DATA = "input.city.data";
+    String STREET = "input.street";
+    String HOUSE = "input.house";
+    String APARTMENT = "input.apartment";
     String REGEX_NAME_UKR = "regex.name.ukr";
     String REGEX_NAME_LAT = "regex.name.lat";
     String REGEX_LOGIN = "regex.login";
