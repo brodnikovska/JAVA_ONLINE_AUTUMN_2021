@@ -2,12 +2,14 @@ package controller;
 
 import view.View;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
-import static controller.RegexContainer.*;
 import static controller.RegexContainer.REGEX_LOGIN;
 import static controller.RegexContainer.REGEX_NAME_LAT;
 import static controller.RegexContainer.REGEX_NAME_UKR;
+import static controller.RegexContainer.*;
 import static view.BundleKey.*;
 
 public class InputNoteNoteBook {
@@ -20,12 +22,35 @@ public class InputNoteNoteBook {
     private String login;
     private String usersName;
     private String email;
+    private String phone;
     private String mobilePhone;
     private String zipCode;
     private String city;
     private String houseNumber;
     private String apartmentNumber;
     private String street;
+    private String address;
+    private Date date;
+    private String skypeName;
+
+    public String getDate() {
+        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+        return formatter.format(date);
+    }
+
+    public void setDate() {
+        this.date = new Date(System.currentTimeMillis());
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress() {
+        StringBuilder concatString = new StringBuilder();
+        this.address = concatString.append(zipCode).append(", ").append(city).append(", ").append(street).append(", ")
+                .append(houseNumber).append(", ").append(apartmentNumber).toString();
+    }
 
     public String getUsersName() {
         return usersName;
@@ -70,9 +95,12 @@ public class InputNoteNoteBook {
         this.email =
                 utilityController.inputStringValueWithScanner
                         (EMAIL_DATA, REGEX_EMAIL);
+        this.phone =
+                utilityController.inputStringValueWithScanner
+                        (PHONE_DATA, REGEX_PHONE);
         this.mobilePhone =
                 utilityController.inputStringValueWithScanner
-                        (MOBILE_PHONE_DATA, REGEX_PHONE);
+                        (MOBILE_PHONE_DATA, REGEX_MOBILE_PHONE);
         this.zipCode =
                 utilityController.inputStringValueWithScanner
                         (ZIP_CODE_DATA, REGEX_ZIP);
@@ -88,5 +116,13 @@ public class InputNoteNoteBook {
         this.apartmentNumber =
                 utilityController.inputStringValueWithScanner
                         (APARTMENT, REGEX_APARTMENT);
+        setAddress();
+        System.out.println(address);
+        setDate();
+        System.out.println(date);
+        this.skypeName =
+                utilityController.inputStringValueWithScanner
+                        (SKYPE_NAME, REGEX_SKYPE);
+
     }
 }
