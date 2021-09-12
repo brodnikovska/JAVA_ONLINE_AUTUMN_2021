@@ -12,16 +12,25 @@ import static controller.RegexContainer.*;
 import static view.BundleKey.*;
 
 public class InputNoteNoteBook {
+    /**
+     * Class fields
+     * */
     private View view;
     private Scanner sc;
     private Model model;
 
+    /**
+     * Class Constructor
+     * */
     public InputNoteNoteBook(Model model, View view, Scanner sc) {
         this.model = model;
         this.view = view;
         this.sc = sc;
     }
 
+    /**
+     * Work method
+     * */
     public void inputNote() {
         UtilityController utilityController =
                 new UtilityController(sc, view);

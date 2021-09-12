@@ -34,6 +34,9 @@ public class Model {
         this.fathersName = fathersName;
     }
 
+    /**
+     * Method sets user's name as last name + 1-st letter of first name + dot from previously entered data
+     * */
     public void setUsersName() {
         StringBuilder concatString = new StringBuilder();
         this.usersName = concatString.append(lastName).append(" ").append(firstName.charAt(0)).append(".").toString();
@@ -51,11 +54,17 @@ public class Model {
         return userGroup;
     }
 
+    /**
+     * Method returns set current date and time in format comfortable for reading
+     * */
     public String getDate() {
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         return formatter.format(date);
     }
 
+    /**
+     * Method sets current date and time
+     * */
     public void setDate() {
         this.date = new Date(System.currentTimeMillis());
     }
@@ -64,21 +73,14 @@ public class Model {
         return address;
     }
 
+    /**
+     * Method sets user's address as zip code + city + street + house + apartment from previously entered data
+     * */
     public void setAddress() {
         StringBuilder concatString = new StringBuilder();
         this.address = concatString.append(zipCode).append(", ").append(city).append(", ").append(street).append(", ")
                 .append(houseNumber).append(", ").append(apartmentNumber).toString();
     }
-
-
-
-
-
-
-
-
-
-
 
     public void setEmail(String email) {
         this.email = email;
@@ -116,6 +118,9 @@ public class Model {
         this.skypeName = skypeName;
     }
 
+    /**
+     * Method sets user group as one from the enum Class
+     * */
     public void setUserGroup(UserGroups userGroup) {
         this.userGroup = userGroup;
     }

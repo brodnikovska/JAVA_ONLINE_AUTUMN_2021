@@ -26,6 +26,9 @@ public enum UserGroups {
             return this.name;
         }
 
+        /**
+         * Get all enum values as string array
+         * */
         public static String[] getUserGroups() {
                 if (userGroups == null) {
                         userGroups = Stream.of(VALUES)
@@ -35,6 +38,9 @@ public enum UserGroups {
                 return userGroups;
         }
 
+        /**
+         * Get enum by position
+         * */
         public static UserGroups getGroup(int group) {
                 if (listOfUserGroups == null) {
                         listOfUserGroups = Arrays.stream(values())

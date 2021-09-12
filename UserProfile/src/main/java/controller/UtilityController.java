@@ -9,11 +9,17 @@ public class UtilityController {
     private Scanner scanner;
     private View view;
 
+    /**
+     * Class constructor
+     * */
     public UtilityController(Scanner scanner, View view) {
         this.scanner = scanner;
         this.view = view;
     }
 
+    /**
+     * Returns string matching to regex
+     * */
     public String inputStringValueWithScanner(String message, String regex) {
         String res;
         view.printStringInput(message);
@@ -23,6 +29,9 @@ public class UtilityController {
         return res;
     }
 
+    /**
+     * Returns user group as enum
+     * */
     public UserGroups inputGroupByNumberWithScanner(String message, String regex) {
         String res;
         view.printStringInput(message);
