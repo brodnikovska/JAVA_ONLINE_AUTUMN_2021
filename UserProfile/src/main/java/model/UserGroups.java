@@ -42,7 +42,7 @@ public enum UserGroups {
          * Get enum by position
          * */
         public static UserGroups getGroup(int group) {
-                if (listOfUserGroups == null) {
+                if (listOfUserGroups == null & group >= 0) {
                         listOfUserGroups = Arrays.stream(values())
                                 .collect(Collectors.toList());
                 }
