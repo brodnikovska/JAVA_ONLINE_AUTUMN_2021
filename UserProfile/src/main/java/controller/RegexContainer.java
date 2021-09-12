@@ -16,4 +16,5 @@ public interface RegexContainer {
     String REGEX_HOUSE_UKR = "^[0-9[а-щьюяґіїє]]{1,4}$";
     String REGEX_HOUSE_LAT = "^[0-9[a-z]]{1,4}$";
     String REGEX_SKYPE = "^live:.cid.[0-9[a-z]]{16}$";
+    String REGEX_GROUP_ENUM = "[12345]$";
 }

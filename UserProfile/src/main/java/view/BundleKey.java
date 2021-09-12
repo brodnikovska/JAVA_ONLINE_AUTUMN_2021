@@ -7,6 +7,7 @@ public interface BundleKey {
     String FATHERS_NAME = "input.fathers.name.data";
     String WRONG_INPUT_DATA = "input.wrong.data";
     String LOGIN_DATA = "input.nickname.data";
+    String USER_GROUP = "input.user.group";
     String EMAIL_DATA = "input.email.data";
     String MOBILE_PHONE_DATA = "input.mobile.phone.data";
     String PHONE_DATA = "input.phone.data";
