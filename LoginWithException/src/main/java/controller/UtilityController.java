@@ -1,18 +1,18 @@
 package controller;
 
-import model.UserGroups2;
-import view.View2;
+import model.UserGroups;
+import view.View;
 
 import java.util.Scanner;
 
-public class UtilityController2 {
+public class UtilityController {
     private Scanner scanner;
-    private View2 view;
+    private View view;
 
     /**
      * Class constructor
      * */
-    public UtilityController2(Scanner scanner, View2 view) {
+    public UtilityController(Scanner scanner, View view) {
         this.scanner = scanner;
         this.view = view;
     }
@@ -32,12 +32,12 @@ public class UtilityController2 {
     /**
      * Returns user group as enum
      * */
-    public UserGroups2 inputGroupByNumberWithScanner(String message, String regex) {
+    public UserGroups inputGroupByNumberWithScanner(String message, String regex) {
         String res;
         view.printStringInput(message);
         while( !(scanner.hasNext() && (res = scanner.next()).matches(regex))) {
             view.printWrongStringInput(message);
         }
-        return UserGroups2.getGroup(Integer.parseInt(res));
+        return UserGroups.getGroup(Integer.parseInt(res));
     }
 }

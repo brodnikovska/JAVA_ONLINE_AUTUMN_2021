@@ -3,7 +3,7 @@ package model;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Model2 {
+public class Model {
     private String lastName;
     private String firstName;
     private String fathersName;
@@ -20,7 +20,7 @@ public class Model2 {
     private String address;
     private String skypeName;
     private Date date;
-    private UserGroups2 userGroup;
+    private UserGroups userGroup;
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -50,7 +50,7 @@ public class Model2 {
         this.login = login;
     }
 
-    public UserGroups2 getUserGroup() {
+    public UserGroups getUserGroup() {
         return userGroup;
     }
 
@@ -121,7 +121,7 @@ public class Model2 {
     /**
      * Method sets user group as one from the enum Class
      * */
-    public void setUserGroup(UserGroups2 userGroup) {
+    public void setUserGroup(UserGroups userGroup) {
         this.userGroup = userGroup;
     }
 }

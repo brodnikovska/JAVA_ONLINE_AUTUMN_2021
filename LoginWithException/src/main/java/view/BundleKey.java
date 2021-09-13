@@ -1,6 +1,6 @@
 package view;
 
-public interface BundleKey2 {
+public interface BundleKey {
     String INPUT_STRING_DATA = "input.string.data";
     String FIRST_NAME = "input.first.name.data";
     String LAST_NAME = "input.last.name.data";

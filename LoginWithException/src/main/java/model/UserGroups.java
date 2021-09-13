@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public enum UserGroups2 {
+public enum UserGroups {
     GENERAL("General"),
     SUPER_ADMIN("Super admin"),
     ADMIN("Admin"),
@@ -13,11 +13,11 @@ public enum UserGroups2 {
     AUTHOR("Author");
 
     private final String name;
-    private static final UserGroups2[] VALUES = values();
-    private static List<UserGroups2> listOfUserGroups;
+    private static final UserGroups[] VALUES = values();
+    private static List<UserGroups> listOfUserGroups;
     private static String[] userGroups;
 
-    UserGroups2(String s) {
+    UserGroups(String s) {
         name = s;
     }
 
@@ -32,7 +32,7 @@ public enum UserGroups2 {
     public static String[] getUserGroups() {
         if (userGroups == null) {
             userGroups = Stream.of(VALUES)
-                    .map(UserGroups2::toString)
+                    .map(UserGroups::toString)
                     .toArray(String[]::new);
         }
         return userGroups;
@@ -41,7 +41,7 @@ public enum UserGroups2 {
     /**
      * Get enum by position
      * */
-    public static UserGroups2 getGroup(int group) {
+    public static UserGroups getGroup(int group) {
         if (listOfUserGroups == null & group >= 0) {
             listOfUserGroups = Arrays.stream(values())
                     .collect(Collectors.toList());

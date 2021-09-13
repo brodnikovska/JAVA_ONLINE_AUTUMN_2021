@@ -1,28 +1,28 @@
 package controller;
 
-import model.Model2;
-import view.View2;
+import model.Model;
+import view.View;
 
 import java.util.Scanner;
 
-import static controller.RegexContainer2.REGEX_LOGIN;
-import static controller.RegexContainer2.REGEX_NAME_LAT;
-import static controller.RegexContainer2.REGEX_NAME_UKR;
-import static controller.RegexContainer2.*;
-import static view.BundleKey2.*;
+import static controller.RegexContainer.REGEX_LOGIN;
+import static controller.RegexContainer.REGEX_NAME_LAT;
+import static controller.RegexContainer.REGEX_NAME_UKR;
+import static controller.RegexContainer.*;
+import static view.BundleKey.*;
 
-public class InputNoteNoteBook2 {
+public class InputNoteNoteBook {
     /**
      * Class fields
      * */
-    private View2 view;
+    private View view;
     private Scanner sc;
-    private Model2 model;
+    private Model model;
 
     /**
      * Class Constructor
      * */
-    public InputNoteNoteBook2(Model2 model, View2 view, Scanner sc) {
+    public InputNoteNoteBook(Model model, View view, Scanner sc) {
         this.model = model;
         this.view = view;
         this.sc = sc;
@@ -32,15 +32,15 @@ public class InputNoteNoteBook2 {
      * Work method
      * */
     public void inputNote() {
-        UtilityController2 utilityController =
-                new UtilityController2(sc, view);
-        String str = (String.valueOf(View2.messageBundle.getLocale()).equals("ua"))
+        UtilityController utilityController =
+                new UtilityController(sc, view);
+        String str = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_NAME_UKR : REGEX_NAME_LAT;
-        String street = (String.valueOf(View2.messageBundle.getLocale()).equals("ua"))
+        String street = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_STREET_UKR : REGEX_STREET_LAT;
-        String city = (String.valueOf(View2.messageBundle.getLocale()).equals("ua"))
+        String city = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_CITY_UKR : REGEX_CITY_LAT;
-        String house = (String.valueOf(View2.messageBundle.getLocale()).equals("ua"))
+        String house = (String.valueOf(View.messageBundle.getLocale()).equals("ua"))
                 ? REGEX_HOUSE_UKR : REGEX_HOUSE_LAT;
 
         model.setLastName(utilityController.inputStringValueWithScanner
