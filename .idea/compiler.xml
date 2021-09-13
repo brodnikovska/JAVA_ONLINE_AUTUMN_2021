@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="UserProfile" />
+        <module name="LoginWithException" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LoginWithException" target="8" />
       <module name="UserProfile" target="8" />
     </bytecodeTargetLevel>
   </component>
