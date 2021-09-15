@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA_ONLINE_AUTUMN_2021.iml" filepath="$PROJECT_DIR$/.idea/JAVA_ONLINE_AUTUMN_2021.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoginWithException/LoginWithException.iml" filepath="$PROJECT_DIR$/LoginWithException/LoginWithException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Student/Student.iml" filepath="$PROJECT_DIR$/Student/Student.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserProfile/UserProfile.iml" filepath="$PROJECT_DIR$/UserProfile/UserProfile.iml" />
     </modules>
   </component>
