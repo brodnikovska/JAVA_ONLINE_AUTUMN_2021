@@ -1,6 +1,5 @@
 package controller;
 
-import model.UserGroups;
 import view.View;
 
 import java.util.Scanner;
@@ -27,17 +26,5 @@ public class UtilityController {
             view.printWrongStringInput(message);
         }
         return res;
-    }
-
-    /**
-     * Returns user group as enum
-     * */
-    public UserGroups inputGroupByNumberWithScanner(String message, String regex) {
-        String res;
-        view.printStringInput(message);
-        while( !(scanner.hasNext() && (res = scanner.next()).matches(regex))) {
-            view.printWrongStringInput(message);
-        }
-        return UserGroups.getGroup(Integer.parseInt(res));
     }
 }
