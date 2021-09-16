@@ -40,6 +40,6 @@ public class Student {
     }
 
     public int hashCode() {
-        return (int) age * name.hashCode() * group.hashCode();
+        return (int) age * name.hashCode() + group.hashCode();
     }
 }
