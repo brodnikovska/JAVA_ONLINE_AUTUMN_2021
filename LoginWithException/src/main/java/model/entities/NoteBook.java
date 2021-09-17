@@ -22,8 +22,9 @@ public class NoteBook {
         loginData = login;
     }
 
-    public void printNote(NoteBook noteBook) {
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder();
-        System.out.println(String.valueOf(sb.append(this.getFirstNameData()).append(" ").append(this.getLoginData())));
+        return String.valueOf(sb.append("Name: ").append(this.getFirstNameData()).append(", login: ").append(this.getLoginData()));
     }
 }

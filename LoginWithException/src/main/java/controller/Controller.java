@@ -25,7 +25,6 @@ public class Controller {
 
         NoteBook noteBook = getNoteBook(inputNoteNoteBook);
         System.out.println(noteBook);
-        noteBook.printNote(noteBook);
     }
 
     private NoteBook getNoteBook(InputNoteNoteBook inputNoteNoteBook) {
