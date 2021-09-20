@@ -6,10 +6,31 @@ public class Triangle extends Shape {
     private Point top;
     private double a, b, c;
 
-    public Triangle(Point leftBottom, Point rightBottom, Point top) {
+    public Point getLeftBottom() {
+        return leftBottom;
+    }
+
+    public Point getRightBottom() {
+        return rightBottom;
+    }
+
+    public Point getTop() {
+        return top;
+    }
+
+    public Triangle(Point leftBottom, Point rightBottom, Point top) throws NotValidTriangleException {
+        if (!isTriangleValid(leftBottom, rightBottom, top))     {
+            throw new NotValidTriangleException("The sum of two lengths in triangle must be more than the third length");
+        }
         this.leftBottom = leftBottom;
         this.rightBottom = rightBottom;
         this.top = top;
+    }
+
+    public boolean isTriangleValid(Point leftBottom, Point rightBottom, Point top) {
+        double[] lengths = new double[] {Point.getDistanceBetweenTwoPoints(leftBottom, rightBottom),
+                Point.getDistanceBetweenTwoPoints(leftBottom, top), Point.getDistanceBetweenTwoPoints(rightBottom, top)};
+        return ((lengths[0] + lengths[1]) > lengths[2]) & ((lengths[0] + lengths[2]) > lengths[1]) & ((lengths [1] + lengths[2]) > lengths[0]);
     }
 
     @Override
