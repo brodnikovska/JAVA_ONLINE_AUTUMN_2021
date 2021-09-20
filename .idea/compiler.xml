@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Shapes" />
         <module name="UserProfile" />
         <module name="Student" />
         <module name="LoginWithException" />
@@ -13,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="LoginWithException" target="8" />
+      <module name="Shapes" target="1.7" />
       <module name="Student" target="1.7" />
       <module name="UserProfile" target="8" />
     </bytecodeTargetLevel>
